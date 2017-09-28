@@ -1,6 +1,6 @@
 /**
  * AngularJS module to manage HTTP Digest Authentication
- * @version v0.4.3 - 2015-11-11
+ * @version v0.4.3 - 2017-09-28
  * @link https://github.com/tafax/angular-digest-auth
  * @author Matteo Tafani Alunno <matteo.tafanialunno@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -319,7 +319,7 @@ dgAuth.provider('dgAuthService', function DgAuthServiceProvider()
         this.signin = function()
         {
             if(!_started)
-                throw 'You have to start te service first';
+                throw 'You have to start the service first';
 
             stateMachine.send('signin');
         };
@@ -330,7 +330,7 @@ dgAuth.provider('dgAuthService', function DgAuthServiceProvider()
         this.signout = function()
         {
             if(!_started)
-                throw 'You have to start te service first';
+                throw 'You have to start the service first';
 
             stateMachine.send('signout');
         };
@@ -345,7 +345,7 @@ dgAuth.provider('dgAuthService', function DgAuthServiceProvider()
         this.setCredentials = function(username, password)
         {
             if(!_started)
-                throw 'You have to start te service first';
+                throw 'You have to start the service first';
 
             stateMachine.send('submitted', {
                 credentials: {
@@ -516,6 +516,7 @@ dgAuth.provider('dgAuthService', function DgAuthServiceProvider()
         return new DgAuthService($q, authIdentity, authRequests, stateMachine);
     }];
 });
+
 
 // Source: src/services/auth-client.js
 
