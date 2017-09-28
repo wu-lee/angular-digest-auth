@@ -59,6 +59,13 @@ dgAuth.config(['stateMachineProvider', function(stateMachineProvider)
                     }]
                 },
                 {
+                    to: 'staleLogin',
+                    predicate: ['authService', 'authRequests', function(authService, authRequests)
+                    {
+                        return (authService. authRequests.getValid());
+                    }]
+                },
+                {
                     to: 'failureLogin',
                     predicate: ['authRequests', function(authRequests)
                     {
