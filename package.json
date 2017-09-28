@@ -15,6 +15,7 @@
     "angular-state-machine": "git://github.com/tafax/angular-state-machine"
   },
   "devDependencies": {
+    "angular-mocks": "*",
     "grunt-cli": ">= 0.1.7",
     "grunt-contrib-uglify": "*",
     "grunt-conventional-changelog": "*",
